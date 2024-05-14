@@ -71,14 +71,7 @@ for card in range(0,(len(new_deck.all_cards))//2):
     player_one.add_cards(new_deck.deal_one())
     player_two.add_cards(new_deck.deal_one())
 
-print(player_one)
-player_one.display_cards()
-
-print('\n')
-
-print(player_two)
-player_two.display_cards()
-
+'''
 ####################################
 game_on=True
 round_num=0
@@ -139,9 +132,24 @@ while game_on:
                 for i in range(5):
                     player_1_card.append(player_one.remove_one())
                     player_2_card.append(player_two.remove_one())
+'''
+##################################################################### 
+class Hand:
+    def __init__(self) -> None:
+        self.cards=[]
+        self.value=0
+        self.aces=0
 
-
-
-
+    def add_card(self):
+        card=new_deck.deal_one()
+        self.cards.append(card)
+        self.value+=values[card.rank]
+    
+ #   def adj_for_ace (self):
 
     
+
+    
+        
+
+
